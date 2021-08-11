@@ -9,9 +9,12 @@ yarn
 ```
 
 ### In case of Yarn error
-Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
 
-## Add ".env.local" file with keys
+``` txt
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+```
+
+## Add ".env.local" file with Firebase keys
 
 ### Add Project
 
@@ -37,7 +40,7 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
 
 ![](readme_imgs/Copy-Data.png)
 
-### Paste on .env.local file
+### Paste it on `.env.local` file
 
 ![](readme_imgs/Env-file.png)
 
@@ -57,4 +60,9 @@ REACT_APP_FIREBASE_APP_ID=1:674817952261:web:249c073427fbd0b1e5ea6c
 ![](readme_imgs/Auth.png)
 
 
-### finally write `yarn start` in the directory to start the project 
+### Finally write `yarn start` in the directory to start the project 
+
+### To install firebase
+``` txt
+yarn add firebase
+```

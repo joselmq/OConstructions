@@ -2,9 +2,11 @@
 
 ## Clone and install
 
+``` txt
 git clone https://github.com/joselmq/OConstructions.git
 cd OConstructions
 yarn
+```
 
 ### In case of Yarn error
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted

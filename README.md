@@ -50,5 +50,9 @@ REACT_APP_FIREBASE_MESSAGING_SENDER_ID=674817952261
 REACT_APP_FIREBASE_APP_ID=1:674817952261:web:249c073427fbd0b1e5ea6c
 ```
 
+### To use register/login enable: autentication -> Sign-in method -> Email/Password
+
+![](readme_imgs/Auth.png)
+
 
 ### `yarn start`

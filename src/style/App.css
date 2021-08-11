@@ -1,0 +1,287 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* ################################################# */
+/* ################################################# */
+/* ################################################# */
+
+.section-1, .section-2, .section-3, .section-4{
+    height: 100vh;
+}
+.section-1{
+  background-color: #282c34;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/auth-development-ae454.appspot.com/o/Im%C3%A1genes%2FWhatsApp%20Image%202021-07-23%20at%2017.08.27.jpeg?alt=media&token=48ac50e2-668c-4a9a-91e0-84ee3a55a616");
+  background-repeat: no-repeat;
+  display: flex;
+  background-size: 90%;
+  
+}
+
+.section-2{
+  background-color: #A5A584ff;
+}
+
+.section-3{
+  background-color: #1E1E1Eff;
+}
+
+.section-4{
+  background-color: #3B3D3Eff;
+}
+
+.footer-bar{
+  background-color: #72AFD5ff;
+  bottom: 0;
+}
+
+.body{
+    min-height: 100%;
+}
+
+.top-menu{
+  overflow: hidden;
+  /* background-color: #007ACCff; */
+  background-color: #282c34;
+  color: rgb(224, 218, 218);
+  height: 5vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 2px;
+  display: block;
+  transition: top 0.3s;
+}
+
+.lateral-menu{
+  background-color: #007ACCff;
+  background: transparent;
+  height: 50vh;
+  width: 10vw;
+  max-width: 100px;
+  min-width: 50px;
+  position: fixed;
+  top: 25vh;
+  left: 0;
+}
+
+.vertical-align-parent{
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-between;
+  flex: 1 1 auto;
+}
+
+.vertical-align-child{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-between;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.menu-btn{
+  background-color: hsl(233, 34%, 24%);
+  height: 25%;
+  width: 10px;
+  padding-top: 25%;
+  text-align: center;
+  text-align: right;
+  align-items: center;
+  font-weight: 400;
+  line-height: 1.5;
+  /* color: hsl(210, 11%, 90%); */
+  color: transparent;
+  text-decoration: none;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  /* padding: .375rem .75rem; */
+  /* font-size: 1rem; */
+  font-size: 1vw;
+  /* border-radius: .25rem; */
+  transition-timing-function: ease;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0s;    
+  display: inline-block;
+  overflow: hidden;
+}
+
+.menu-btn:hover{
+  width: 100px; 
+  color: hsl(210, 11%, 90%);
+  text-decoration: none;
+  text-align: center;
+  background-color: hsl(233, 34%, 15%);
+  padding-right: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  align-items: center;
+  vertical-align: middle;
+}
+@media only screen and (max-width: 768px) {
+  .menu-btn:hover {
+    padding-left: 0.5rem;
+    text-align: left;
+    font-size: 2.5vw;
+  }
+}
+
+.btn-top-menu{
+  border: 1px solid green;
+}
+
+.btn {
+  color: rgb(214, 214, 214) !important;
+}
+
+.hover-img .hover-img--on,
+.hover-img:hover .hover-img--off {
+  display: none;
+}
+
+.hover-img:hover .hover-img--on {
+  display: inline;
+}
+
+  /* .img-fondo{
+    width: 100vw;
+    height: 100vh;
+    margin-left: -20px;
+    background-size: contain;
+  } */
+  
+  /*
+  .colors{
+    --eerie-black: #1E1E1Eff;
+    --artichoke: #A5A584ff;
+    --onyx: #3B3D3Eff;
+    --onyx-2: #3B3D3Eff;
+    --onyx-3: #3B3D3Eff; 
+    --artichoke: #A5A584ff;
+    --iceberg: #72AFD5ff;
+    --onyx: #3B3D3Eff;
+    --iceberg-2: #72AFD5ff;
+    --artichoke-2: #A5A584ff;
+    --eerie-black: #1E1E1Eff;
+    --bright-navy-blue: #007ACCff;
+    --onyx: #3B3D3Eff;
+    --onyx-2: #3B3D3Eff;
+    --onyx-3: #3B3D3Eff;
+
+    --heliotrope: #df63ec;
+    --malibu: #6bbbf8;
+    --purple-heart: #5742c9;
+    --black-pearl: #050413;
+    --link-water: #d5e9f5;
+    --paris-m: #1d0769;
+    --valencia: #d94a3f;
+    --seance: #671579;
+    --revolver: #2f1438;
+    --cape-cod: #474848;
+
+
+  }
+  */
+
+/* Lateral Bar https://codepen.io/lisilinhart/pen/oNWzrVy */
+
+  /* .status-bar {
+    --x: 0.15;
+    transform-origin: 50% 50%;
+    transform: scaleX(var(--x));
+  }
+  .status-bar__item {
+    --opacity: 0;
+    --scale: 0.8;
+    transform-origin: 50% 50%;
+    opacity: var(--opacity, 1);
+    transform: scale(var(--scale));
+  }
+  
+  .status-bar {
+    min-width: 340px;
+    background: #35303d;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  }
+  .status-bar__list {
+    display: flex;
+    align-items: center;
+  }
+  .status-bar__item {
+    margin: 0 6px;
+  }
+  .status-bar__spacer {
+    flex: 1;
+  }
+  .status-bar .oi {
+    font-size: 0.9rem;
+    display: block;
+  }
+  
+  html {
+    height: 100%;
+    display: flex;
+  }
+  
+  body {
+    position: relative;
+    margin: auto;
+    background: #151318;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    color: #fff;
+  }
+  
+  .replay {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: inherit;
+    transform: translateX(-50%);
+  }
+  .replay .oi {
+    font-size: 1.5rem;
+  } */

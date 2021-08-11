@@ -55,4 +55,4 @@ REACT_APP_FIREBASE_APP_ID=1:674817952261:web:249c073427fbd0b1e5ea6c
 ![](readme_imgs/Auth.png)
 
 
-### `yarn start`
+### finally write `yarn start` in the directory to start the project 

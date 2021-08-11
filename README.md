@@ -17,11 +17,11 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
 
 ### Add a name
 
-![]("readme_imgs/Add a name.png")
+![](readme_imgs/Add-a-name.png)
 
 ### Create Project
 
-![]("readme_imgs/Create Project.png")
+![](readme_imgs/Create-Project.png)
 
 ### Choose Web
 
@@ -29,15 +29,15 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
 
 ### Register app
 
-![]("readme_imgs/Register app.png")
+![](readme_imgs/Register-app.png)
 
 ### Copy Data
 
-![]("readme_imgs/Copy Data.png")
+![](readme_imgs/Copy-Data.png)
 
 ### Paste on .env.local file
 
-![]("readme_imgs/env file.png")
+![](readme_imgs/Env-file.png)
 
 ### Example (replace data after "=")
 

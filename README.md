@@ -9,6 +9,7 @@ It's a React+Firebase web page of prefabricated houses. For now it can:
 * Hide nav-bar on scroll down.
 * Scroll to sections.
 * Manage Routes.
+* Use images from Firebase Storage.
 
 I'm working on:
 * Getting fewer renders from React with useEffect

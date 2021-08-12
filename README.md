@@ -1,3 +1,25 @@
+# What is this?
+
+It's a React+Firebase web page of prefabricated houses. For now it can:
+* Register a user.
+* Login.
+* Change the password with an e-mail link.
+* Recover password.
+* Enter to profile.
+* Hide nav-bar on scroll down.
+* Scroll to sections.
+* Manage Routes.
+
+I'm working on:
+* Getting fewer renders from React with useEffect
+
+And I'll work on:
+* Reducing the bundle size of Firebase, changing the way it gets called.
+* Let users change the attributes of houses.
+* Generate a pdf file with the attributes selected (maybe with Latex).
+* Stylish pages and check responsiveness.
+* Purchase history/state.
+
 # Start Project
 
 ## Clone and install

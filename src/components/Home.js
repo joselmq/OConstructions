@@ -82,6 +82,7 @@ export const SectionContainer = styled.div`
   // background-size: contain; 
   // background: no-repeat center center fixed;
   // background: fixed;
+  background-position: center;
   background-size: cover;
   //background-repeat: no-repeat;
   min-height: 100vh;
@@ -91,7 +92,7 @@ export const SectionContainer = styled.div`
   }
   &.seccion2{
     background-color: ${props => props.getBColor ? props.getBColor : "#dadada"};
-    background-image: url(${image6});
+    //background-image: url(${image6});
   }
   &.seccion3{
     background-image: url(${image8});
@@ -99,10 +100,13 @@ export const SectionContainer = styled.div`
 `;
 
 const ImageContainer = styled.img`
-  width: 300px;
-  height: 300px;
-  margin: 15px;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  --bs-gutter-x: 0rem;
   background-size: cover;
+  background-position: center;
+
   &.image1{
     background-image: url(${image8});
   }
@@ -165,10 +169,8 @@ export function Section2(){
   return(
     <SectionContainer className="seccion2" getBColor="#263238"> 
       <div className="row flex-items-xs-center slider-2 flex-items-xs-middle" id="sec-2" >
-        <div className="row">
-          {/* <div className="col-xs-12"><h1></h1></div>
-          <div className="col-xs-12"><h3></h3></div> */}
-        </div>
+        <p2 className="title-font tracking-in-contract-bck">Ordenes Construcciones</p2>
+        <p2 className="text-s2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p2>
       </div>
     </SectionContainer>
   )
@@ -188,48 +190,41 @@ export function Section3(){
 }
 
 export function Section4(){
-  // console.log("image");
-
-  // const img8 = image8() 
-  // console.log(img8);
-
-
-
   return(
-    <div className="container-fluid section-4 ">
-      <div className="row flex-items-xs-center slider-3 flex-items-xs-middle" id="sec-4" >
+    <div className="container-fluid section-4" id="sec-4">
+      
           {/* Row 1 */}
-          <div className="row flex-items-xs-center flex-items-xs-middle">
-            <a className='hover-img col-3' data-scroll href="/design">
-              <ImageContainer className='hover-img--off image1' />
-              <ImageContainer className='hover-img--on image6'/>
-            </a>
-            <a className='hover-img col-3' data-scroll href="/design">
+          <div className="row display-img">
+            <a className='tree-imgs hover-img col-4' data-scroll href="/design">
               <ImageContainer className='hover-img--off image1'/>
-              <ImageContainer className='hover-img--on image6'/>
+              <ImageContainer className='hover-img--on fade-in image6'/>
             </a>
-            <a className='hover-img col-3' data-scroll href="/design">
+            <a className='tree-imgs hover-img col-4' data-scroll href="/design">
               <ImageContainer className='hover-img--off image1'/>
-              <ImageContainer className='hover-img--on image6'/>
+              <ImageContainer className='hover-img--on fade-in image6'/>
+            </a>
+            <a className='tree-imgs hover-img col-4' data-scroll href="/design">
+              <ImageContainer className='hover-img--off image1'/>
+              <ImageContainer className='hover-img--on fade-in image6'/>
             </a>
           </div>
           {/* Row 2 */}
-          <div className="row flex-items-xs-center">
-            <a className='hover-img col-3' data-scroll href="/design">
+          <div className="row display-img">
+            <a className='tree-imgs hover-img col-4' data-scroll href="/design">
               <ImageContainer className='hover-img--off image1'/>
-              <ImageContainer className='hover-img--on image6'/>
+              <ImageContainer className='hover-img--on fade-in image6'/>
             </a>
-            <a className='hover-img col-3' data-scroll href="/design">
+            <a className='tree-imgs hover-img col-4' data-scroll href="/design">
               <ImageContainer className='hover-img--off image1'/>
-              <ImageContainer className='hover-img--on image6'/>
+              <ImageContainer className='hover-img--on fade-in image6'/>
             </a>
-            <a className='hover-img col-3' data-scroll href="/design">
+            <a className='tree-imgs hover-img col-4' data-scroll href="/design">
+              <a className="button-mas">Más</a>
               <ImageContainer className='hover-img--off image1'/>
-              <ImageContainer className='hover-img--on image6'/>
+              <ImageContainer className='hover-img--on fade-in image6'/>
             </a>
           </div>
-
-      </div>
+      
     </div>
   )
 }

@@ -2,12 +2,9 @@ import React  from "react"
 // import firebase from "firebase/app"
 import "firebase/storage"
 import styled from 'styled-components'
-import { image6, image8, image15, image11, image14, image13 } from "../Images/Images"
+import { image6, image8, image13, image15 } from "../Images/Images"
 
 export function Home() {
-
-
-
   return (
     <>
       <div>
@@ -79,23 +76,19 @@ export const SectionContainer = styled.div`
   background-color: ${props => props.getBColor ? props.getBColor : "black"};
   background-repeat: no-repeat;
   height: 100vh;
-  // background-size: contain; 
-  // background: no-repeat center center fixed;
-  // background: fixed;
   background-position: center;
   background-size: cover;
   //background-repeat: no-repeat;
   min-height: 100vh;
 
   &.seccion1{
-    background-image: url(${image15});
+    background-image: url(${props => props.image ? props.image : ""};);
   }
   &.seccion2{
     background-color: ${props => props.getBColor ? props.getBColor : "#dadada"};
-    //background-image: url(${image6});
   }
   &.seccion3{
-    background-image: url(${image8});
+    background-image: url(${props => props.image ? props.image : ""});
   }
 `;
 
@@ -108,46 +101,29 @@ const ImageContainer = styled.img`
   background-position: center;
 
   &.image1{
-    background-image: url(${image8});
+    background-image: url(${props => props.image ? props.image : ""});
   }
   &.image2{
-    background-image: url(${image11});
+    background-image: url(${props => props.image ? props.image : ""});
   }
   &.image3{
-    background-image: url(${image15});
+    background-image: url(${props => props.image ? props.image : ""});
   }
   &.image4{
-    background-image: url(${image13});
+    background-image: url(${props => props.image ? props.image : ""});
   }
   &.image5{
-    background-image: url(${image14});
+    background-image: url(${props => props.image ? props.image : ""});
   }
   &.image6{
-    background-image: url(${image6});
+    background-image: url(${props => props.image ? props.image : ""});
   }
 `
 
 export function Section1(){
-
-  // var imagePath = 'Imágenes/WhatsApp Image 2021-07-23 at 17.08.27.jpeg'
-  // var backgroundImageUrl = GetImage(imagePath)
-
-  // const [imagen, setImagen] = useState()
-  
-  console.log("image15")
-  console.log(image15)
-  
-  // setImagen(image15)
-  
-  
-  // useEffect(() => {
-  //   imagen()
-  // }, [imagen])
-  
-  // console.log("imagen")
-  // console.log(this.imagen.value)
+  var imgUrl = image15()
   return(
-    <SectionContainer className="seccion1" getBColor="#282c34">
+    <SectionContainer className="seccion1" getBColor="#282c34" image={imgUrl}>
       {/* <div className="col-xs-12"><img className="img-fondo" src={backgroundImageUrl} alt="100"></img></div> */}
       <div className="row flex-items-xs-center slider-1 flex-items-xs-middle" id="sec-1" >
         <div className="row">
@@ -160,25 +136,21 @@ export function Section1(){
 }
 
 export function Section2(){
-
-  // var imagePath2 = 'Imágenes/WhatsApp Image 2021-07-23 at 14.49.15 (2).jpeg'
-  // var backgroundImageUrl2 = GetImage(imagePath2)
-  console.log("image8")
-  console.log(image8)
   //#A5A584ff
   return(
     <SectionContainer className="seccion2" getBColor="#263238"> 
       <div className="row flex-items-xs-center slider-2 flex-items-xs-middle" id="sec-2" >
-        <p2 className="title-font tracking-in-contract-bck">Ordenes Construcciones</p2>
-        <p2 className="text-s2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p2>
+        <h2 className="title-font tracking-in-contract-bck">Ordenes Construcciones</h2>
+        <h2 className="text-s2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</h2>
       </div>
     </SectionContainer>
   )
 }
 
 export function Section3(){
+  var imgUrl = image8()
   return(
-    <SectionContainer className="seccion3" getBColor="#A5A584ff">
+    <SectionContainer className="seccion3" getBColor="#A5A584ff" image={imgUrl}>
       <div className="row flex-items-xs-center slider-3 flex-items-xs-middle" id="sec-3" >
         <div className="row">
           {/* <div className="col-xs-12"><h1></h1></div>
@@ -190,38 +162,40 @@ export function Section3(){
 }
 
 export function Section4(){
+  var imgUrl6 = image6()
+  var imgUrl8 = image13()
   return(
     <div className="container-fluid section-4" id="sec-4">
       
           {/* Row 1 */}
           <div className="row display-img">
-            <a className='tree-imgs hover-img col-4' data-scroll href="/design">
-              <ImageContainer className='hover-img--off image1'/>
-              <ImageContainer className='hover-img--on fade-in image6'/>
+            <a className='three-imgs hover-img col-4' data-scroll href="/design">
+              <ImageContainer className='hover-img--off image1' image={imgUrl8}/>
+              <ImageContainer className='hover-img--on fade-in image6' image={imgUrl6}/>
             </a>
-            <a className='tree-imgs hover-img col-4' data-scroll href="/design">
-              <ImageContainer className='hover-img--off image1'/>
-              <ImageContainer className='hover-img--on fade-in image6'/>
+            <a className='three-imgs hover-img col-4' data-scroll href="/design">
+              <ImageContainer className='hover-img--off image1' image={imgUrl8}/>
+              <ImageContainer className='hover-img--on fade-in image6' image={imgUrl6}/>
             </a>
-            <a className='tree-imgs hover-img col-4' data-scroll href="/design">
-              <ImageContainer className='hover-img--off image1'/>
-              <ImageContainer className='hover-img--on fade-in image6'/>
+            <a className='three-imgs hover-img col-4' data-scroll href="/design">
+              <ImageContainer className='hover-img--off image1' image={imgUrl8}/>
+              <ImageContainer className='hover-img--on fade-in image6' image={imgUrl6}/>
             </a>
           </div>
           {/* Row 2 */}
           <div className="row display-img">
-            <a className='tree-imgs hover-img col-4' data-scroll href="/design">
-              <ImageContainer className='hover-img--off image1'/>
-              <ImageContainer className='hover-img--on fade-in image6'/>
+            <a className='three-imgs hover-img col-4' data-scroll href="/design">
+              <ImageContainer className='hover-img--off image1' image={imgUrl8}/>
+              <ImageContainer className='hover-img--on fade-in image6' image={imgUrl6}/>
             </a>
-            <a className='tree-imgs hover-img col-4' data-scroll href="/design">
-              <ImageContainer className='hover-img--off image1'/>
-              <ImageContainer className='hover-img--on fade-in image6'/>
+            <a className='three-imgs hover-img col-4' data-scroll href="/design">
+              <ImageContainer className='hover-img--off image1' image={imgUrl8}/>
+              <ImageContainer className='hover-img--on fade-in image6' image={imgUrl6}/>
             </a>
-            <a className='tree-imgs hover-img col-4' data-scroll href="/design">
-              <a className="button-mas">Más</a>
-              <ImageContainer className='hover-img--off image1'/>
-              <ImageContainer className='hover-img--on fade-in image6'/>
+            <a className='three-imgs hover-img col-4' data-scroll href="/design">
+              <div className="button-mas">Más</div>
+              <ImageContainer className='hover-img--off image1' image={imgUrl8}/>
+              <ImageContainer className='hover-img--on fade-in image6' image={imgUrl6}/>
             </a>
           </div>
       

@@ -283,11 +283,20 @@
 }
 
 .button-mas{
-  margin: 0;
+  /* Position */
   position: absolute;
-  -ms-transform: translate(50%, 50%);
-  transform: translate(50%, 50%);
+  -ms-transform: translate(16vw, 25vh);
+  transform: translate(14vw, 23vh); /* (100/6, 100/4) */
   display: inline-block;
+  /* Style */
+  width: 8vw;
+  padding: 24px 0;
+  background-color: hsl(257, 74%, 40%);
+  border: 0;
+  border-radius: 0;
+  text-align: center;
+  margin: 14px 0 0 0;
+  color: #fff;
 }
 
 .btn-top-menu{
@@ -311,7 +320,7 @@
 	animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
-	animation-duration: 0.5s;
+	animation-duration: 2s;
 }
 
 @keyframes fadeInOpacity {
@@ -327,7 +336,7 @@
   height: 50%;
 }
 
-.tree-imgs {
+.three-imgs {
   height: 100%;
   padding: 0% !important;
   border: 0px;

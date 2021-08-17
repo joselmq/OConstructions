@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import firebase from "firebase/app"
 import "firebase/storage"
 // import React from 'react'
@@ -6,99 +6,25 @@ import "firebase/storage"
 export function GetImage(imagePath){
 
   const [imageUrl, setImageUrl] = useState()
-  // var imageUrl = ""
-  var storage = firebase.storage()
-  var storageRef = storage.ref()
-  var tangRef = storageRef.child(imagePath)
+  
+  useEffect(()=>{
+    var storage = firebase.storage()
+    var storageRef = storage.ref()
+    var tangRef = storageRef.child(imagePath)
 
-  tangRef.getDownloadURL().then(function(url){
-    const dta = url
-    setImageUrl(dta)
-    // imageUrl = dta
-  }).catch(function(error){
-    console.log(error)
-  });
-  console.log("imageUrl")
-  console.log(imageUrl)
+    tangRef.getDownloadURL().then(function(url){
+      console.log(url)
+      setImageUrl(url)
+    }).catch(function(error){
+      console.log(error)
+    });
+    
+    console.log("imageUrl")
+    // console.log(imageUrl)
+  },[imagePath])
   
   return imageUrl
 }
-// export function GetImage(imagePath){
-
-//   const [imageUrl, setImageUrl] = useState()
-//   var storage = firebase.storage()
-//   var storageRef = storage.ref()
-//   var tangRef = storageRef.child(imagePath)
-
-//   tangRef.getDownloadURL().then(function(url){
-//     const dta = url
-//     setImageUrl(dta)
-//   }).catch(function(error){
-//     console.log(error)
-//   });
-//   console.log("imageUrl")
-//   console.log(imageUrl)
-  
-//   return imageUrl
-// }
-// export function GetImage(imagePath){
-
-//   const [imageUrl, setImageUrl] = useState()
-//   var storage = firebase.storage()
-//   var storageRef = storage.ref()
-//   var tangRef = storageRef.child(imagePath)
-//   const dta = ""
-//   React.useEffect(() => {
-//     useImage()
-//   }, [])
-
-//   const useImage = async () => {
-//     tangRef.getDownloadURL().then(function(url){
-//       dta = url
-//     }).catch(function(error){
-//       console.log(error)
-//     });
-//     console.log("imageUrl")
-//     console.log(imageUrl)
-    
-//     setImageUrl(dta)
-    
-//     const data = await fetch(imageUrl)
-//     return data
-//   }
-
-
-// }
-
-// export function GetImage(imagePath){
-
-//   const [imageUrl, setImageUrl] = useState()
-//   var storage = firebase.storage()
-//   var storageRef = storage.ref()
-//   var tangRef = storageRef.child(imagePath)
-
-//   React.useEffect(() => {
-//     useImage()
-//   }, [useImage])
-
-//   const useImage = async () => {
-//     console.log("storageRef")
-//     console.log(storageRef)
-//     console.log("tangRef")
-//     console.log(tangRef)
-//     const data = await fetch(storageRef)
-//     const image = await data.json()
-//     setImageUrl(image)
-//     console.log("imageUrl")
-//     console.log(imageUrl)
-
-
-//     data = await fetch(imageUrl)
-//     return "data"
-//   }
-
-
-// }
 
 export function image1(){
   var imageUrl = GetImage("Imágenes/1.jpeg")

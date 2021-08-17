@@ -80,16 +80,12 @@ export const SectionContainer = styled.div`
   background-size: cover;
   //background-repeat: no-repeat;
   min-height: 100vh;
-
-  &.seccion1{
-    background-image: url(${props => props.image ? props.image : ""};);
-  }
+  background-image: url(${props => props.image ? props.image : ""};);
+  
   &.seccion2{
     background-color: ${props => props.getBColor ? props.getBColor : "#dadada"};
   }
-  &.seccion3{
-    background-image: url(${props => props.image ? props.image : ""});
-  }
+
 `;
 
 const ImageContainer = styled.img`
@@ -99,25 +95,7 @@ const ImageContainer = styled.img`
   --bs-gutter-x: 0rem;
   background-size: cover;
   background-position: center;
-
-  &.image1{
-    background-image: url(${props => props.image ? props.image : ""});
-  }
-  &.image2{
-    background-image: url(${props => props.image ? props.image : ""});
-  }
-  &.image3{
-    background-image: url(${props => props.image ? props.image : ""});
-  }
-  &.image4{
-    background-image: url(${props => props.image ? props.image : ""});
-  }
-  &.image5{
-    background-image: url(${props => props.image ? props.image : ""});
-  }
-  &.image6{
-    background-image: url(${props => props.image ? props.image : ""});
-  }
+  background-image: url(${props => props.image ? props.image : ""});
 `
 
 export function Section1(){

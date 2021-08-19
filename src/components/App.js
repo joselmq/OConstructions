@@ -8,7 +8,8 @@ import Login from "./Login"
 import PrivateRoute from "./PrivateRoute"
 import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from "./UpdateProfile"
-import DesignMediterraneo from "./Design"
+import Design from "./Design"
+import Designs from "./Designs"
 import "../style/App.css"
 import "../style/Login.css"
 // import 'bootstrap/dist/css/bootstrap.min.css';
@@ -28,7 +29,8 @@ function App() {
             <Route path="/signup" component={Signup} />
             <Route path="/login" component={Login} />
             <Route path="/forgot-password" component={ForgotPassword} />
-            <Route path="/design" component={DesignMediterraneo} />
+            <Route path="/design/:designName" component={Design} />
+            <Route path="/designs" component={Designs} />
           </Switch>
         </AuthProvider>
       </Router>

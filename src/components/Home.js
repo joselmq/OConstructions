@@ -75,17 +75,15 @@ export function TopMenu(){
 export const SectionContainer = styled.div`
   background-color: ${props => props.getBColor ? props.getBColor : "black"};
   background-repeat: no-repeat;
-  height: 100vh;
   background-position: center;
   background-size: cover;
   //background-repeat: no-repeat;
   min-height: 100vh;
-  background-image: url(${props => props.image ? props.image : ""};);
+  background-image: url(${props => props.image ? props.image : ""});
   
   &.seccion2{
     background-color: ${props => props.getBColor ? props.getBColor : "#dadada"};
   }
-
 `;
 
 const ImageContainer = styled.img`
@@ -96,6 +94,7 @@ const ImageContainer = styled.img`
   background-size: cover;
   background-position: center;
   background-image: url(${props => props.image ? props.image : ""});
+
 `
 
 export function Section1(){
@@ -144,39 +143,37 @@ export function Section4(){
   var imgUrl8 = image13()
   return(
     <div className="container-fluid section-4" id="sec-4">
-      
-          {/* Row 1 */}
-          <div className="row display-img">
-            <a className='three-imgs hover-img col-4' data-scroll href="/design">
-              <ImageContainer className='hover-img--off image1' image={imgUrl8}/>
-              <ImageContainer className='hover-img--on fade-in image6' image={imgUrl6}/>
-            </a>
-            <a className='three-imgs hover-img col-4' data-scroll href="/design">
-              <ImageContainer className='hover-img--off image1' image={imgUrl8}/>
-              <ImageContainer className='hover-img--on fade-in image6' image={imgUrl6}/>
-            </a>
-            <a className='three-imgs hover-img col-4' data-scroll href="/design">
-              <ImageContainer className='hover-img--off image1' image={imgUrl8}/>
-              <ImageContainer className='hover-img--on fade-in image6' image={imgUrl6}/>
-            </a>
-          </div>
-          {/* Row 2 */}
-          <div className="row display-img">
-            <a className='three-imgs hover-img col-4' data-scroll href="/design">
-              <ImageContainer className='hover-img--off image1' image={imgUrl8}/>
-              <ImageContainer className='hover-img--on fade-in image6' image={imgUrl6}/>
-            </a>
-            <a className='three-imgs hover-img col-4' data-scroll href="/design">
-              <ImageContainer className='hover-img--off image1' image={imgUrl8}/>
-              <ImageContainer className='hover-img--on fade-in image6' image={imgUrl6}/>
-            </a>
-            <a className='three-imgs hover-img col-4' data-scroll href="/design">
-              <div className="button-mas">Más</div>
-              <ImageContainer className='hover-img--off image1' image={imgUrl8}/>
-              <ImageContainer className='hover-img--on fade-in image6' image={imgUrl6}/>
-            </a>
-          </div>
-      
+      {/* Row 1 */}
+      <div className="row display-img">
+        <a className='three-imgs hover-img col-4' data-scroll href="/design">
+          <ImageContainer className='hover-img--off' image={imgUrl8}/>
+          <ImageContainer className='hover-img--on fade-in' image={imgUrl6}/>
+        </a>
+        <a className='three-imgs hover-img col-4' data-scroll href="/design">
+          <ImageContainer className='hover-img--off' image={imgUrl8}/>
+          <ImageContainer className='hover-img--on fade-in' image={imgUrl6}/>
+        </a>
+        <a className='three-imgs hover-img col-4' data-scroll href="/design">
+          <ImageContainer className='hover-img--off' image={imgUrl8}/>
+          <ImageContainer className='hover-img--on fade-in' image={imgUrl6}/>
+        </a>
+      </div>
+      {/* Row 2 */}
+      <div className="row display-img">
+        <a className='three-imgs hover-img col-4' data-scroll href="/design">
+          <ImageContainer className='hover-img--off' image={imgUrl8}/>
+          <ImageContainer className='hover-img--on fade-in' image={imgUrl6}/>
+        </a>
+        <a className='three-imgs hover-img col-4' data-scroll href="/design">
+          <ImageContainer className='hover-img--off' image={imgUrl8}/>
+          <ImageContainer className='hover-img--on fade-in' image={imgUrl6}/>
+        </a>
+        <a className='three-imgs col-4 hover-img' data-scroll href="/designs">
+          <div className="button-mas">Más</div>
+          <ImageContainer className='hover-img--off' image={imgUrl8}/>
+          <ImageContainer className='hover-img--on fade-in' image={imgUrl6}/>
+        </a>
+      </div>
     </div>
   )
 }

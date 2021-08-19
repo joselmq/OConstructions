@@ -2,7 +2,7 @@ import React  from "react"
 // import firebase from "firebase/app"
 import "firebase/storage"
 import styled from 'styled-components'
-import { image6, image8, image13, image15 } from "../Images/Images"
+import { image6, image8, image13, image15, image16 } from "../Images/Images"
 
 export function Home() {
   return (
@@ -141,6 +141,7 @@ export function Section3(){
 export function Section4(){
   var imgUrl6 = image6()
   var imgUrl8 = image13()
+  var imgUrl16 = image16()
   return(
     <div className="container-fluid section-4" id="sec-4">
       {/* Row 1 */}
@@ -155,7 +156,7 @@ export function Section4(){
         </a>
         <a className='three-imgs hover-img col-4' data-scroll href="/design">
           <ImageContainer className='hover-img--off' image={imgUrl8}/>
-          <ImageContainer className='hover-img--on fade-in' image={imgUrl6}/>
+          <ImageContainer className='hover-img--on fade-in' image={imgUrl16}/>
         </a>
       </div>
       {/* Row 2 */}

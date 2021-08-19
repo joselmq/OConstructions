@@ -1,18 +1,19 @@
 # What is this?
 
-It's a React+Firebase web page of prefabricated houses. For now it can:
+It's a React + Firebase web page of prefabricated houses. For now it can:
 * Register a user.
 * Login.
 * Change the password with an e-mail link.
 * Recover password.
 * Enter to profile.
-* Hide nav-bar on scroll down.
+* Hide/show nav-bar on scroll down.
 * Scroll to sections.
-* Manage Routes.
+* Manage Routes dynamically.
 * Use images from Firebase Storage.
+* Use controled renders (useEffect).
 
 I'm working on:
-* Getting fewer renders from React with useEffect
+* Get images dynamically from Firebase Storage.
 
 And I'll work on:
 * Reducing the bundle size of Firebase, changing the way it gets called.

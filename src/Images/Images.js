@@ -86,3 +86,7 @@ export function image15(){
   var imageUrl = GetImage("Imágenes/15.jpeg")
   return imageUrl
 }
+export function image16(){
+  var imageUrl = GetImage("Imágenes/16.jpeg")
+  return imageUrl
+}

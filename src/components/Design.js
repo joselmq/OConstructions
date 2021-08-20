@@ -1,11 +1,10 @@
 import React from "react"
-import styled from 'styled-components'
-import { TopMenu, Footer, LateralMenu, SectionContainer } from './Home';
+import { TopMenu, Footer } from './Home';
 import { image6 } from "../Images/Images"
+import { PlaneContainer, PlaneImageContainer, FlexPlaneContainer, ButtonsContainer, ButtonPlane } from './StyledComponents'
+import { SectionContainer, TitleDisplay, TextDisplay } from './StyledComponents'
 
 export default function DesignMediterraneo() {
-    
-
     return (
     <>
         <div>
@@ -25,94 +24,54 @@ export default function DesignMediterraneo() {
         <div>
             <Footer />
         </div>
-
-        <div>
-            <LateralMenu />
-        </div>
     </>
     )
 }
 
-export const PlaneContainer = styled.div`
-    height: 60vh;
-    width: 60vw;
 
-    &.plano1{
-        background-image: url(${image6});
-    }
-    &.plano2{
-        background-image: url(${image6});
-    }
-    &.plano3{
-        background-image: url(${image6});
-    }
-`;
-const SizeButton = styled.div`
-    background-color: #282c34;
-    text-align: center;
-    vertical-align: middle;
-    padding: 14px 0;
-`
 
 
 
 function MainImage(){
   
     return(
-        <SectionContainer className="seccion1" getBColor="#050413">
-        {/* <div className="col-xs-12"><img className="img-fondo" src={backgroundImageUrl} alt="100"></img></div> */}
-        <div className="row flex-items-xs-center slider-1 flex-items-xs-middle" >
-            <div className="row">
-
-            </div>
-            <div className="row">
-
-            </div>
-            <div className="row">
-
-            </div>
-        </div>
+        <SectionContainer getBColor="#050413">
+            <TitleDisplay>
+                Diseño <br /> Casita Mediterranea
+            </TitleDisplay>
+            <TextDisplay>
+               <br/>Revisa nuestros modelos. Podrás cotizar y editarlo a tu gusto.
+            </TextDisplay>
         </SectionContainer>
     )
 }
 function SecundaryImage(){
-
     return(
-        <SectionContainer className="seccion3" getBColor="#050413">
-        {/* <div className="col-xs-12"><img className="img-fondo" src={backgroundImageUrl} alt="100"></img></div> */}
-        <div className="row flex-items-xs-center slider-1 flex-items-xs-middle" >
-            <div className="row">
-
-            </div>
-            <div className="row">
-
-            </div>
-            <div className="row">
-
-            </div>
-        </div>
+        <SectionContainer className="seccion3" getBColor="#263238">
         </SectionContainer>
     )
 }
 
 function PlaneImage(){
-
+    var imgUrl6 = image6()
     return(
-        <div style={{backgroundColor:"#050413"}}>
-            <div className="row" style={{height:"20vh"}} />
+        <SectionContainer getBColor="#282c34">
+            <FlexPlaneContainer>
+                <PlaneContainer>
+                    <div className="prev" />
+                    <PlaneImageContainer image={imgUrl6}/>
+                    <div className="next" />
+                </PlaneContainer>
+                <ButtonsContainer>
+                    <ButtonPlane>42</ButtonPlane>
+                    <ButtonPlane>54</ButtonPlane>
+                    <ButtonPlane>72</ButtonPlane>
+                    <ButtonPlane>100</ButtonPlane>
+                </ButtonsContainer>
 
-            <div className="row">
-                <div className="col" style={{width:"20vw"}} />
+            </FlexPlaneContainer>
 
-                <div className="col">
-                    <PlaneContainer className="plano1" getBColor="#050413" />
-                </div>
-
-                <div className="col" style={{width:"20vw"}}>
-                </div>
-            </div>
-
-            <div className="row"  style={{height:"20vh"}}>
+            {/* <div className="row"  style={{height:"20vh"}}>
                 <div className="row"  style={{height:"30%"}} />
                 <div className="row"  style={{height:"40%"}}>
                     <div className="col-2" />
@@ -130,7 +89,7 @@ function PlaneImage(){
                     </SizeButton>
                 </div>
                 <div className="row"  style={{height:"30%"}} />
-            </div>
-        </div>
+            </div> */}
+        </SectionContainer>
     )
 }

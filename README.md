@@ -21,6 +21,7 @@ And I'll work on:
 * Generate a pdf file with the attributes selected (maybe with Latex).
 * Stylish pages and check responsiveness.
 * Purchase history/state.
+* Replicate the logo with CSS and animate it.
 
 # Start Project
 

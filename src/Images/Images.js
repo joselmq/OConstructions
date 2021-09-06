@@ -4,6 +4,8 @@ import "firebase/storage"
 // import React from 'react'
 
 export function GetImage(imagePath){
+  // console.log("imagePath")
+  // console.log(imagePath)
 
   const [imageUrl, setImageUrl] = useState()
   
@@ -13,18 +15,90 @@ export function GetImage(imagePath){
     var tangRef = storageRef.child(imagePath)
 
     tangRef.getDownloadURL().then(function(url){
-      console.log(url)
+      // console.log(url)
       setImageUrl(url)
     }).catch(function(error){
       console.log(error)
     });
     
-    console.log("imageUrl")
+    // console.log("imageUrl")
     // console.log(imageUrl)
   },[imagePath])
   
   return imageUrl
 }
+
+
+
+
+
+// export function GetAllImages(){
+//   const [data, setData] = useState([]);
+//   useEffect(()=>{
+//     var storage = firebase.storage()
+//     const listItem = () => {
+//       storage.ref().child('Imágenes/').listAll()
+//         .then(res => {
+//           res.items.forEach((item) => {
+//             // setData(arr => [...arr, item.name]);
+//             setData(arr => [...arr, item.name]);
+//         })
+//       })
+//         .catch(err => {
+//         alert(err.message);
+//       })
+//     }
+//     listItem()
+//   },[])
+//   return data
+// }
+
+// export function GetAllImages(imageName){
+
+//   const [Switch, setSwitch] = useState(True)
+//   const [imageUrl, setImageUrl] = useState()
+  
+//   if (Switch){
+//     useEffect(()=>{
+//       var storage = firebase.storage()
+//       var storageRef = storage.ref()
+//       var tangRef = storageRef.child("Imágenes/" + imageName)
+
+//       tangRef.getDownloadURL().then(function(url){
+//         console.log(url)
+//         setImageUrl(url)
+//       }).catch(function(error){
+//         console.log(error)
+//       });
+      
+//       console.log("imageUrl")
+//       // console.log(imageUrl)
+//     },[])
+//   }
+//   return imageUrl
+// }
+
+// export function GetAllImages(imageName){
+//   const [Files, setFiles] = useState("s")
+//   useEffect(() => {
+//     var storage = firebase.storage()
+//     var storageRef = storage.ref()
+//     const fetchImages = async () => {
+//       let result = await storageRef.child("Imágenes/" + imageName).listAll();
+//       let urlPromises = result.items.map(imageRef => imageRef.getDownloadURL());
+//       return Promise.all(urlPromises);
+//     }
+
+//     const loadImages = async () => {
+//       const urls = await fetchImages();
+//       setFiles(urls);
+//     }
+//     loadImages();
+//   }, []);
+//   console.log("Files")
+//   console.log(Files)
+// }
+
 
 export function image1(){
   var imageUrl = GetImage("Imágenes/1.jpeg")

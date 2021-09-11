@@ -37,7 +37,8 @@ function FirstSection(){
                 Diseños de casas prefabricadas
             </TitleDisplay>
             <TextDisplay>
-                <br/><br/>Selecciona el diseño que quieras y luego podrás cotizar y editarlo a tu gusto.
+                <br/>Selecciona el diseño que quieras. <br/>
+                Podrás cotizar y editarlo a tu gusto.
             </TextDisplay>
         </SectionContainer>
     )
@@ -68,17 +69,14 @@ function ImagesDisplay(){
         listItem()
     },[])
     console.log("**data")
-    console.log(data[1])
-    // console.log(data[1].url)
+    console.log(data)
     return(
         <SectionContainer getBColor="#050413">
             <div>
             {
-                Object.keys(data).map((key, index) => ( 
-                // <p key={index}> this is my key {key} and this is my value {data[key]}</p> 
-                    <FlexContainer>
-                        {key} = {index}
-                        <FlexItem image={imgUrl13} href={"/design/" + key}/>
+                data.map((key, index) => ( 
+                    <FlexContainer key={`${key.name}_{key.url}`}>
+                        <FlexItem image={key.url} href={"/design/" + key.name}/>
                     </FlexContainer>
                 ))
             }

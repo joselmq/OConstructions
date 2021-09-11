@@ -10,6 +10,7 @@ export const SectionContainer = styled.div`
   background-size: cover;
   //background-repeat: no-repeat;
   min-height: 100vh;
+  color: rgb(222, 234, 248);
   background-image: url(${props => props.image ? props.image : ""});
   
   &.seccion2{
